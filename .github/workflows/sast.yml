@@ -22,8 +22,8 @@ jobs:
           docker pull mixeway/scanner:latest
       - name: Run Scan
         run: |
-          docker run -e \
-          OSS_USERNAME=${{ secrets.OSS_USERNAME }} \
+          docker run \
+          -e OSS_USERNAME=${{ secrets.OSS_USERNAME }} \
           -e OSS_KEY=${{ secrets.OSS_KEY }} \
           -e MIXEWAY_URL=https://hub.mixeway.io \
           -e MIXEWAY_KEY=${{ secrets.MIXEWAY_API_KEY }} \
