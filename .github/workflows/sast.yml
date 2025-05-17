@@ -31,6 +31,6 @@ jobs:
           -e MODE=STANDALONE \
           -e MIXEWAY_PROJECT_NAME=${{ secrets.MIXEWAY_PROJECT_NAME }} \
           -e BRANCH=master \
-          -v /opt/lab_sec_audit/sast:/opt/sources 
+          -v /opt/lab_sec_audit/sast:/opt/sources \
           mixeway/scanner:latest
 
